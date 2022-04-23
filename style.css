@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ------------------------- Main ------------------------------- */
+span{
+    margin: 0 1mm;
+}
+/* ------------------------- Contenido main ------------------------------- */
+#contenido-main{
+    display: block;
+}
+
+/* ------------------------- Primera seccion ------------------------------ */
+#primera-seccion > h1, h3{
+    background-color: aqua;
+}
+
+/* ------------------------- Segunda Seccion ------------------------------ */
+#segunda-seccion #contenedor-info{
+    display: flex;
+    background-color: aquamarine;
+}
+    #contenedor-info #info-temperatura{
+        display: flex;
+        align-items: center;
+    }
+        #info-temperatura div{
+            display: flex;
+        }
+    #contenedor-info #info-varios{
+    }
+        #info-varios > ul{
+            display: block;
+        }
+        #info-varios > ul > li{
+            display: flex;
+        }
+
+/* -------------------------- Cuarta Seccion ------------------------------- */
+#cuarta-seccion{
+    background-color: rgb(127, 146, 255);
+}
+    #contenedor-pronostico-semana{
+        display: flex;
+    }
+        .contenedor-dias{
+            display: flex;
+            align-items: center;
+        }
+            .max-min{
+                font-size: 1.3rem;
+                display: flex;
+                flex-direction: column;
+            }
