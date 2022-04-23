@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>El clima</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,500;0,800;0,900;1,200;1,400;1,500;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="defineNacionalidad.js"></script>
+    <script src="datosClima.js"></script>
+
+
+</head>
+<body>
+    <main>
+        <div id="contenido-main">
+
+            <section id="primera-seccion">
+                <h1>El tiempo en <span id="localidad"></span>, <span id="pais"></span></h1>
+                <h3>Dia<span id="fecha"></span> </h3>
+            </section>
+
+            <section id="segunda-seccion">
+                <div id="contenedor-info">
+                    <div id="info-temperatura">
+                        <img id="iconoClima" src="" alt="">
+                        <div>
+                            <h1><span id="temperaturaActual"></span></h1>
+                            <div> 
+                                <span>°C</span> 
+                                <span>|</span> 
+                                <span>°F</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div id="info-varios">
+                        <ul>
+                            <li>Humedad: <span id="humedad"></span> % </li>
+                            <li>Presion: <span id="presion"></span> hPa</li>
+                            <li>Viento: a <span id="viento"></span> Km/h</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cuarta-seccion">
+                <div id="contenedor-pronostico-semana">
+                    <div class="contenedor-dias">
+                        <div id="dia0"></div>
+                        <img id="icono0" src="" alt="">
+                        <div class="max-min"> 
+                            <span id="tempMax0"></span>
+                            <span id="tempMin0"></span>
+                        </div>
+                    </div>
+                    <div class="contenedor-dias">
+                        <div id="dia1"></div>
+                        <img id="icono1" src="" alt="">
+                        <div class="max-min"> 
+                            <span id="tempMax1"></span>
+                            <span id="tempMin1"></span>
+                        </div>
+                    </div>
+                    <div class="contenedor-dias">
+                        <div id="dia2"></div>
+                        <img id="icono2" src="" alt="">
+                        <div class="max-min"> 
+                            <span id="tempMax2"></span>
+                            <span id="tempMin2"></span>
+                        </div>
+                    </div>
+                    <div class="contenedor-dias">
+                        <div id="dia3"></div>
+                        <img id="icono3" src="" alt="">
+                        <div class="max-min"> 
+                            <span id="tempMax3"></span>
+                            <span id="tempMin3"></span>
+                        </div>
+                    </div>
+                    <div class="contenedor-dias">
+                        <div id="dia4"></div>
+                        <img id="icono4" src="" alt="">
+                        <div class="max-min">
+                            <span id="tempMax4"></span>
+                            <span id="tempMin4"></span>
+                        </div>
+                    </div>
+                    <div class="contenedor-dias">
+                        <div id="dia5"></div>
+                        <img id="icono5" src="" alt="">
+                        <div class="max-min"> 
+                            <span id="tempMax5"></span>
+                            <span id="tempMin5"></span>
+                        </div>
+                    </div>
+                    <div class="contenedor-dias">
+                        <div id="dia6"></div>
+                        <img id="icono6" src="" alt="">
+                        <div class="max-min"> 
+                            <span id="tempMax6"></span>
+                            <span id="tempMin6"></span>
+                        </div>
+                    </div>
+                    <div class="contenedor-dias">
+                        <div id="dia7"></div>
+                        <img id="icono7" src="" alt="">
+                        <div class="max-min"> 
+                            <span id="tempMax7"></span>
+                            <span id="tempMin7"></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </section>
+
+    </main>
+</body>
+
+<script src="obtieneFecha.js"></script>
+
+</html>
