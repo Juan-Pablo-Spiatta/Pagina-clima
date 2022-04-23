@@ -1,4 +1,5 @@
 # Pagina-clima
+
 Hola a todos, este es el primer proyecto en el que me encuentro trabajando. 
 Me enfoco en aprender como traer y almacenar los datos que me proporciona una API y el funcionamiento de geolocation.
 
@@ -7,3 +8,6 @@ El proyecto es una página del clima, la cual obtiene tu posición por localizac
 
 
 Al que vea este proyecto, si crees que tengo que corregir algo, por favor dímelo, mi objetivo con esto es aprender. Gracias! :)
+
+ Hola a todos, este es el primer proyecto en el que me encuentro trabajando.
+
