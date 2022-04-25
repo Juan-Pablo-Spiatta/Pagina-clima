@@ -23,9 +23,9 @@ section{
     height: 15vh;
     background-color: aqua;
 }
-    #primera-seccion > h1, h3{
+    /* #primera-seccion > h1, h3{
         
-    }
+    } */
 
 /* ------------------------- Segunda Seccion ------------------------------ */
 #segunda-seccion{
@@ -55,9 +55,9 @@ section{
                     #info-temperatura-pri > div > div{
                         margin-top: .3rem;
                     }
-            #info-temperatura #info-temperatura-sec{
+            /* #info-temperatura #info-temperatura-sec{
 
-            }
+            } */
                 #info-temperatura-sec > ul > li{
                     display: flex;
                 }
