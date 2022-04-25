@@ -14,45 +14,107 @@ span{
     display: block;
 }
 
-/* ------------------------- Primera seccion ------------------------------ */
-#primera-seccion > h1, h3{
-    background-color: aqua;
+section{
+    padding: 1rem;
 }
 
-/* ------------------------- Segunda Seccion ------------------------------ */
-#segunda-seccion #contenedor-info{
-    display: flex;
-    background-color: aquamarine;
+/* ------------------------- Primera seccion ------------------------------ */
+#primera-seccion{
+    height: 15vh;
+    background-color: aqua;
 }
-    #contenedor-info #info-temperatura{
+    #primera-seccion > h1, h3{
+        
+    }
+
+/* ------------------------- Segunda Seccion ------------------------------ */
+#segunda-seccion{
+    height: 25vh;
+}
+    #segunda-seccion #contenedor-info{
         display: flex;
-        align-items: center;
+        height: 100%;
     }
-        #info-temperatura div{
+        #contenedor-info #info-temperatura{
+            background-color: rgb(79, 107, 231);
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 1rem;
+            padding: 0 1rem;
         }
-    #contenedor-info #info-varios{
+            #info-temperatura #info-temperatura-pri{
+                display: flex;
+            }
+                #info-temperatura-pri > div{
+                    display: flex;
+                }
+                    #info-temperatura-pri > div > h1{
+                        align-self: center;
+                    }
+                    #info-temperatura-pri > div > div{
+                        margin-top: .3rem;
+                    }
+            #info-temperatura #info-temperatura-sec{
+
+            }
+                #info-temperatura-sec > ul > li{
+                    display: flex;
+                }
+
+        #contenedor-info #info-varios{
+            background-color: rgb(79, 107, 231);
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+            #info-varios > ul{
+                display: block;
+            }
+            #info-varios > ul > li{
+                display: flex;
+            }
+
+/* -------------------------- Tercera Seccion ------------------------------- */
+#tercera-seccion{
+    background-color: coral;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+}
+    #tercera-seccion > svg{
+        align-self: center;
     }
-        #info-varios > ul{
-            display: block;
-        }
-        #info-varios > ul > li{
+    #tercera-seccion #lista-horarios{
+        display: flex;
+        align-self: center;
+    }
+        #lista-horarios > li{
             display: flex;
+            justify-content: center;
+            width: 100px;
         }
 
 /* -------------------------- Cuarta Seccion ------------------------------- */
 #cuarta-seccion{
+    display: flex;
     background-color: rgb(127, 146, 255);
+    height: 15vh;
 }
     #contenedor-pronostico-semana{
         display: flex;
     }
         .contenedor-dias{
             display: flex;
+            margin-right: 1rem;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
             .max-min{
                 font-size: 1.3rem;
                 display: flex;
-                flex-direction: column;
+                
             }
