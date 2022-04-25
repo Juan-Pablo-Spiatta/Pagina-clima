@@ -101,6 +101,21 @@ const setHistoryWeatherData = data => {
     const grafica = document.querySelector("#grafica > polyline")
     grafica.setAttribute("points", `0,${100 - (Math.round(forescast24hs[0].temperatura))} 100,${100 - (Math.round(forescast24hs[1].temperatura))} 200,${100 - (Math.round(forescast24hs[2].temperatura))} 300,${100 - (Math.round(forescast24hs[3].temperatura))} 400,${100 - (Math.round(forescast24hs[4].temperatura))} 500,${100 - (Math.round(forescast24hs[5].temperatura))} 600,${100 - (Math.round(forescast24hs[6].temperatura))} 700,${100 - (Math.round(forescast24hs[7].temperatura))}`)
 
+    const svg = document.querySelector("#grafica")
+    const SVG_NS = "http://www.w3.org/2000/svg"
+    
+    for (let x = 0; x <= 7; x++) {
+        let circulo = document.createElementNS(SVG_NS, "circle")
+        circulo.setAttribute("r", "4px")
+        circulo.setAttribute("fill", "black")
+        circulo.setAttribute("cy", `${100 - (forescast24hs[x].temperatura)}`)
+        circulo.setAttribute("cx", `${x * 100}`)
+        svg.appendChild(circulo)
+    }
+    
+    
+        
+    
     for (let x = 0; x <= 7; x++) {
         if((hora + x * 3) > 23){
             document.getElementById("hora" + x).textContent = (hora + x * 3) - 24 + ":00"
