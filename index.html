@@ -29,14 +29,22 @@
             <section id="segunda-seccion">
                 <div id="contenedor-info">
                     <div id="info-temperatura">
-                        <img id="iconoClima" src="" alt="">
-                        <div>
-                            <h1><span id="temperaturaActual"></span></h1>
-                            <div> 
-                                <span>°C</span> 
-                                <span>|</span> 
-                                <span>°F</span> 
+                        <div id="info-temperatura-pri">
+                            <img id="iconoClima" src="" alt="">
+                            <div>
+                                <h1><span id="temperaturaActual"></span></h1>
+                                <div> 
+                                    <span>°C</span> 
+                                    <span>|</span> 
+                                    <span>°F</span> 
+                                </div>
                             </div>
+                        </div>
+                        <div id="info-temperatura-sec">
+                            <ul>
+                                <li>Sensacion de <span id="sensacion"></span>°</li>
+                                <li>Descripcion: <span id="descripcion"></span></li>
+                            </ul>
                         </div>
                     </div>
                     <div id="info-varios">
@@ -47,6 +55,23 @@
                         </ul>
                     </div>
                 </div>
+            </section>
+
+            <section id="tercera-seccion">
+                <svg id="grafica" xmlns="http://www.w3.org/2000/svg" height="200px" width="700px">
+                    <rect width="700px" height="200px" fill="black" fill-opacity="20%"></rect>
+                    <polyline points="" fill="none" stroke-width="4px" stroke="white" />
+                </svg>
+                <ul id="lista-horarios">
+                    <li id="hora0"></li>
+                    <li id="hora1"></li>
+                    <li id="hora2"></li>
+                    <li id="hora3"></li>
+                    <li id="hora4"></li>
+                    <li id="hora5"></li>
+                    <li id="hora6"></li>
+                    <li id="hora7"></li>
+                </ul>
             </section>
 
             <section id="cuarta-seccion">
