@@ -4,7 +4,7 @@ var unitSelect = units[1]
 
 const fetchData = position => {
     const {latitude, longitude} = position.coords;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=es&appid=${API_KEY}&units=metric`)
     .then(response => response.json())
     .then(data => setCurrentWeatherData(data))
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely&appid=${API_KEY}&units=metric`)
@@ -15,12 +15,14 @@ const fetchData = position => {
 const setCurrentWeatherData = data => {
     console.log(data);
     const currentWeatherData = {
-        temperaturaActual: data.main.temp | 0,
+        temperaturaActual: Math.round(data.main.temp),
+        sensacion: Math.round(data.main.feels_like),
+        descripcion: (data.weather[0].description),
         humedad: data.main.humidity,
-        presion: data.pressure,
+        presion: data.main.pressure,
         viento: data.wind.speed,
         localidad: data.name,
-        pais: definePais(data.sys.country)
+        pais: definePais(data.sys.country),
     }
 
     const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
@@ -95,6 +97,18 @@ const setHistoryWeatherData = data => {
         },
         
     ]
+    
+    const grafica = document.querySelector("#grafica > polyline")
+    grafica.setAttribute("points", `0,${100 - (Math.round(forescast24hs[0].temperatura))} 100,${100 - (Math.round(forescast24hs[1].temperatura))} 200,${100 - (Math.round(forescast24hs[2].temperatura))} 300,${100 - (Math.round(forescast24hs[3].temperatura))} 400,${100 - (Math.round(forescast24hs[4].temperatura))} 500,${100 - (Math.round(forescast24hs[5].temperatura))} 600,${100 - (Math.round(forescast24hs[6].temperatura))} 700,${100 - (Math.round(forescast24hs[7].temperatura))}`)
+
+    for (let x = 0; x <= 7; x++) {
+        if((hora + x * 3) > 23){
+            document.getElementById("hora" + x).textContent = (hora + x * 3) - 24 + ":00"
+        }else{
+            document.getElementById("hora" + x).textContent = hora + x * 3 + ":00"
+        }
+    }
+
     //El pronostico de 7 dias es apartir del dia actual y los proximos 7 dias  
     const forecast7DaysWeatherData = [
         {
@@ -136,8 +150,14 @@ const setHistoryWeatherData = data => {
             document.getElementById(key).textContent = element[key] + '°'
         });
     });
+    
+    var noche = nocheDia()
     for (let index = 0; index < 8; index++) {
-        const url = `http://openweathermap.org/img/wn/${data.daily[index].weather[0].icon}.png`
+        var icono = data.daily[index].weather[0].icon
+        if(noche){
+            icono = icono[0] + icono[1] + "n"
+        }
+        const url = `http://openweathermap.org/img/wn/${icono}.png`
         document.getElementById("icono" + index).src = url
         document.getElementById("dia" + index).textContent = determinaDia(index)
     }
