@@ -30,7 +30,6 @@ span{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        height: 100%;
     }
         section{
             padding: .5rem 1rem;
