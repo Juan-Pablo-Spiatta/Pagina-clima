@@ -1,3 +1,12 @@
+:root{
+    --color-principal: #210124;
+    --color-principal-sombra: #17011a;
+    --color-secundario: #750D37;
+    --color-resalta: white;
+
+    --color-fuente-principal: white;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,43 +14,53 @@
     font-family: 'Raleway', sans-serif;
 }
 
-/* ------------------------- Main ------------------------------- */
 span{
-    margin: 0 1mm;
-}
-/* ------------------------- Contenido main ------------------------------- */
-#contenido-main{
-    display: block;
+    margin: 0 5px;
 }
 
-section{
-    padding: 1rem;
+/* ------------------------- Main ------------------------------- */
+#main{
+    color: var(--color-fuente-principal);
+    display: block;
+    background: var(--color-principal);
+    background-size: cover;
+    height: 100vh;
 }
+    #contenido-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+        section{
+            padding: .5rem 1rem;
+        }
 
 /* ------------------------- Primera seccion ------------------------------ */
 #primera-seccion{
-    height: 15vh;
-    background-color: aqua;
+    height: auto;
+    display: flex;
+    text-align: end;
+    justify-content: space-between;
+    font-size: 1.3rem;
 }
-    /* #primera-seccion > h1, h3{
-        
-    } */
 
-/* ------------------------- Segunda Seccion ------------------------------ */
-#segunda-seccion{
-    height: 25vh;
+/* ------------------------- left-section ------------------------------ */
+#left-section{
+    background-color: var(--color-secundario);
+    display: flex;
+    padding: 1rem;
+    filter: drop-shadow(10px 10px var(--color-principal-sombra));
+    border-radius: 1rem;
 }
-    #segunda-seccion #contenedor-info{
+    #left-section #contenedor-info{
         display: flex;
-        height: 100%;
     }
         #contenedor-info #info-temperatura{
-            background-color: rgb(79, 107, 231);
             display: flex;
             flex-direction: column;
-            justify-content: center;
             border-radius: 1rem;
-            padding: 0 1rem;
+            margin-right: 1rem;
         }
             #info-temperatura #info-temperatura-pri{
                 display: flex;
@@ -56,65 +75,96 @@ section{
                         margin-top: .3rem;
                     }
             /* #info-temperatura #info-temperatura-sec{
-
             } */
                 #info-temperatura-sec > ul > li{
                     display: flex;
                 }
 
         #contenedor-info #info-varios{
-            background-color: rgb(79, 107, 231);
             display: flex;
-            align-items: center;
-            margin: 0 1rem;
-            padding: 1rem;
-            border-radius: 1rem;
         }
             #info-varios > ul{
-                display: block;
+                display: flex;
+                flex-direction: column;
+                margin-top: .3rem;
             }
             #info-varios > ul > li{
                 display: flex;
             }
 
-/* -------------------------- Tercera Seccion ------------------------------- */
-#tercera-seccion{
-    background-color: coral;
-    height: 45vh;
+/* -------------------------- Segunda Seccion ------------------------------- */
+#segunda-seccion{
+    background-color: var(--color-secundario);
+    filter: drop-shadow(10px 10px var(--color-principal-sombra));
     display: flex;
     flex-direction: column;
+    margin: 0 1rem .5rem 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
-    #tercera-seccion > svg{
-        align-self: center;
+        #contenedor-opciones > ul{
+            display: flex;
+            width: 43.75rem;
+        }
+            #contenedor-opciones > ul > li{
+                margin-right: 1rem;
+                display: flex;
+            }
+                #contenedor-opciones > ul > li > button{
+                    color: var(--color-fuente-principal);
+                    font-size: 1.5rem;
+                    background: none;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-bottom: 2px solid var(--color-fuente-principal);
+                }
+                #contenedor-opciones > ul > li > button:focus{
+                    border-bottom: 2px solid orange;
+                }
+    #segunda-seccion > svg{
+        
     }
-    #tercera-seccion #lista-horarios{
+    #segunda-seccion #lista-horarios{
         display: flex;
-        align-self: center;
+        justify-content: space-between;
+        width: 700px;
     }
         #lista-horarios > li{
             display: flex;
-            justify-content: center;
-            width: 100px;
+            width: 40px;
         }
 
-/* -------------------------- Cuarta Seccion ------------------------------- */
-#cuarta-seccion{
+
+/* -------------------------- Tercera Seccion ------------------------------- */
+#tercera-seccion{
     display: flex;
-    background-color: rgb(127, 146, 255);
-    height: 15vh;
+    font-size: 1.3rem;
+    margin: 0 1rem;
 }
     #contenedor-pronostico-semana{
         display: flex;
     }
         .contenedor-dias{
+            background-color: var(--color-secundario);
+            filter: drop-shadow(10px 10px var(--color-principal-sombra));
             display: flex;
-            margin-right: 1rem;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-width: 120px;
+            margin-right: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
         }
             .max-min{
-                font-size: 1.3rem;
+                font-size: 1rem;
                 display: flex;
-                
             }
+
+/* ------------ Responsive ------------------ */
+@media screen and (max-width: 1200px){
+    #contenedor-pronostico-semana{
+        overflow: scroll;
+    }
+}

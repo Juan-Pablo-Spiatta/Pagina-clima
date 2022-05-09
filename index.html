@@ -18,50 +18,59 @@
 
 </head>
 <body>
-    <main>
+    <main id="main">
         <div id="contenido-main">
 
             <section id="primera-seccion">
-                <h1>El tiempo en <span id="localidad"></span>, <span id="pais"></span></h1>
-                <h3>Dia<span id="fecha"></span> </h3>
-            </section>
-
-            <section id="segunda-seccion">
-                <div id="contenedor-info">
-                    <div id="info-temperatura">
-                        <div id="info-temperatura-pri">
-                            <img id="iconoClima" src="" alt="">
-                            <div>
-                                <h1><span id="temperaturaActual"></span></h1>
-                                <div> 
-                                    <span>°C</span> 
-                                    <span>|</span> 
-                                    <span>°F</span> 
+                <div id="left-section">
+                    <div id="contenedor-info">
+                        <div id="info-temperatura">
+                            <div id="info-temperatura-pri">
+                                <img id="iconoClima" src="" alt="">
+                                <div>
+                                    <h1><span id="temperaturaActual"></span></h1>
+                                    <div> 
+                                        <span>°C</span> 
+                                        <span>|</span> 
+                                        <span>°F</span> 
+                                    </div>
                                 </div>
                             </div>
+                            <div id="info-temperatura-sec">
+                                <ul>
+                                    <li>Sensacion de <span id="sensacion"></span>°</li>
+                                    <li>Descripcion: <span id="descripcion"></span></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div id="info-temperatura-sec">
+                        <div id="info-varios">
                             <ul>
-                                <li>Sensacion de <span id="sensacion"></span>°</li>
-                                <li>Descripcion: <span id="descripcion"></span></li>
+                                <li>Humedad: <span id="humedad"></span> % </li>
+                                <li>Presion: <span id="presion"></span> hPa</li>
+                                <li>Viento: a <span id="viento"></span> Km/h</li>
                             </ul>
                         </div>
                     </div>
-                    <div id="info-varios">
-                        <ul>
-                            <li>Humedad: <span id="humedad"></span> % </li>
-                            <li>Presion: <span id="presion"></span> hPa</li>
-                            <li>Viento: a <span id="viento"></span> Km/h</li>
-                        </ul>
-                    </div>
+                </div>
+                <div id="right-section">
+                    <h1>El tiempo en <span id="localidad"></span>, <span id="pais"></span></h1>
+                    <h3><span id="fecha"></span> </h3>
                 </div>
             </section>
 
-            <section id="tercera-seccion">
-                <svg id="grafica" xmlns="http://www.w3.org/2000/svg" height="200px" width="700px">
-                    <rect width="700px" height="200px" fill="black" fill-opacity="20%"></rect>
-                    <polyline points="" fill="none" stroke-width="4px" stroke="white" />
-                    
+            
+
+            <section id="segunda-seccion">
+                <div id="contenedor-opciones">
+                    <ul>
+                        <li><button>Temperatura</button></li>
+                        <li><button>Precipitaciones</button></li>
+                        <li><button>Viento</button></li>
+                    </ul>
+                </div>
+                <svg id="grafica" xmlns="http://www.w3.org/2000/svg" height="100px" width="700px" viewBox="0 0 700 100">
+                    <rect width="700px" height="200px" fill="none"></rect>
+                    <polyline points="" fill="orange" fill-opacity="30%" stroke-width="4px" stroke="yellow" />
                 </svg>
                 <ul id="lista-horarios">
                     <li id="hora0"></li>
@@ -75,11 +84,11 @@
                 </ul>
             </section>
 
-            <section id="cuarta-seccion">
+            <section id="tercera-seccion">
                 <div id="contenedor-pronostico-semana">
                     <div class="contenedor-dias">
                         <div id="dia0"></div>
-                        <img id="icono0" src="" alt="">
+                        <img id="icono0" src="" alt="icon-weather">
                         <div class="max-min"> 
                             <span id="tempMax0"></span>
                             <span id="tempMin0"></span>
@@ -87,7 +96,7 @@
                     </div>
                     <div class="contenedor-dias">
                         <div id="dia1"></div>
-                        <img id="icono1" src="" alt="">
+                        <img id="icono1" src="" alt="icon-weather">
                         <div class="max-min"> 
                             <span id="tempMax1"></span>
                             <span id="tempMin1"></span>
@@ -95,7 +104,7 @@
                     </div>
                     <div class="contenedor-dias">
                         <div id="dia2"></div>
-                        <img id="icono2" src="" alt="">
+                        <img id="icono2" src="" alt="icon-weather">
                         <div class="max-min"> 
                             <span id="tempMax2"></span>
                             <span id="tempMin2"></span>
@@ -103,7 +112,7 @@
                     </div>
                     <div class="contenedor-dias">
                         <div id="dia3"></div>
-                        <img id="icono3" src="" alt="">
+                        <img id="icono3" src="" alt="icon-weather">
                         <div class="max-min"> 
                             <span id="tempMax3"></span>
                             <span id="tempMin3"></span>
@@ -111,7 +120,7 @@
                     </div>
                     <div class="contenedor-dias">
                         <div id="dia4"></div>
-                        <img id="icono4" src="" alt="">
+                        <img id="icono4" src="" alt="icon-weather">
                         <div class="max-min">
                             <span id="tempMax4"></span>
                             <span id="tempMin4"></span>
@@ -119,7 +128,7 @@
                     </div>
                     <div class="contenedor-dias">
                         <div id="dia5"></div>
-                        <img id="icono5" src="" alt="">
+                        <img id="icono5" src="" alt="icon-weather">
                         <div class="max-min"> 
                             <span id="tempMax5"></span>
                             <span id="tempMin5"></span>
@@ -127,7 +136,7 @@
                     </div>
                     <div class="contenedor-dias">
                         <div id="dia6"></div>
-                        <img id="icono6" src="" alt="">
+                        <img id="icono6" src="" alt="icon-weather">
                         <div class="max-min"> 
                             <span id="tempMax6"></span>
                             <span id="tempMin6"></span>
@@ -135,7 +144,7 @@
                     </div>
                     <div class="contenedor-dias">
                         <div id="dia7"></div>
-                        <img id="icono7" src="" alt="">
+                        <img id="icono7" src="" alt="icon-weather">
                         <div class="max-min"> 
                             <span id="tempMax7"></span>
                             <span id="tempMin7"></span>
