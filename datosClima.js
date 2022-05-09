@@ -133,42 +133,42 @@ const setHistoryWeatherData = data => {
     //El pronostico de 7 dias es apartir del dia actual y los proximos 7 dias  
     const forecast7DaysWeatherData = [
         {
-            tempMax0: Math.round(data.daily[0].temp.max),
-            tempMin0: Math.round(data.daily[0].temp.min)
+            tempMax0: Math.round(data.daily[0].temp.max) + "° Max",
+            tempMin0: Math.round(data.daily[0].temp.min) + "° Min"
         },
         {
-            tempMax1: Math.round(data.daily[1].temp.max),
-            tempMin1: Math.round(data.daily[1].temp.min)
+            tempMax1: Math.round(data.daily[1].temp.max) + "° Max",
+            tempMin1: Math.round(data.daily[1].temp.min) + "° Min"
         },
         {
-            tempMax2: Math.round(data.daily[2].temp.max),
-            tempMin2: Math.round(data.daily[2].temp.min)
+            tempMax2: Math.round(data.daily[2].temp.max) + "° Max",
+            tempMin2: Math.round(data.daily[2].temp.min) + "° Min"
         },
         {
-            tempMax3: Math.round(data.daily[3].temp.max),
-            tempMin3: Math.round(data.daily[3].temp.min)
+            tempMax3: Math.round(data.daily[3].temp.max) + "° Max",
+            tempMin3: Math.round(data.daily[3].temp.min) + "° Min"
         },
         {
-            tempMax4: Math.round(data.daily[4].temp.max),
-            tempMin4: Math.round(data.daily[4].temp.min)
+            tempMax4: Math.round(data.daily[4].temp.max) + "° Max",
+            tempMin4: Math.round(data.daily[4].temp.min) + "° Min"
         },
         {
-            tempMax5: Math.round(data.daily[5].temp.max),
-            tempMin5: Math.round(data.daily[5].temp.min)
+            tempMax5: Math.round(data.daily[5].temp.max) + "° Max",
+            tempMin5: Math.round(data.daily[5].temp.min) + "° Min"
         },
         {
-            tempMax6: Math.round(data.daily[6].temp.max),
-            tempMin6: Math.round(data.daily[6].temp.min)
+            tempMax6: Math.round(data.daily[6].temp.max) + "° Max",
+            tempMin6: Math.round(data.daily[6].temp.min) + "° Min"
         },
         {
-            tempMax7: Math.round(data.daily[7].temp.max),
-            tempMin7: Math.round(data.daily[7].temp.min)
+            tempMax7: Math.round(data.daily[7].temp.max) + "° Max" ,
+            tempMin7: Math.round(data.daily[7].temp.min) + "° Min" 
         }
     ]
 
     forecast7DaysWeatherData.forEach(element => {
         Object.keys(element).forEach(key => {
-            document.getElementById(key).textContent = element[key] + '°'
+            document.getElementById(key).textContent = element[key]
         });
     });
     

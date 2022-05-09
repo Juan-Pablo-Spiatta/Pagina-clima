@@ -24,7 +24,7 @@ span{
     display: block;
     background: var(--color-principal);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
     #contenido-main{
         display: flex;
@@ -32,7 +32,7 @@ span{
         justify-content: space-around;
     }
         section{
-            padding: .5rem 1rem;
+            padding: 1rem 1rem;
         }
 
 /* ------------------------- Primera seccion ------------------------------ */
@@ -145,7 +145,7 @@ span{
 }
     #contenedor-pronostico-semana{
         display: flex;
-        padding: 1rem;
+        padding: 1rem 0;
     }
         .contenedor-dias{
             background-color: var(--color-secundario);
@@ -160,7 +160,8 @@ span{
             border-radius: 1rem;
         }
             .max-min{
-                font-size: 1rem;
+                flex-direction: column;
+                font-size: 1.3rem;
                 display: flex;
             }
 
