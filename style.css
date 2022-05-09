@@ -100,6 +100,7 @@ span{
     margin: 0 1rem .5rem 1rem;
     padding: 1rem;
     border-radius: 1rem;
+    overflow: hidden;
 }
         #contenedor-opciones > ul{
             display: flex;
@@ -121,8 +122,9 @@ span{
                 #contenedor-opciones > ul > li > button:focus{
                     border-bottom: 2px solid orange;
                 }
-    /* #segunda-seccion > svg{
-    } */
+    #segunda-seccion #contenedor-svg{
+        padding: 1.5rem 0;
+    } 
     #segunda-seccion #lista-horarios{
         display: flex;
         justify-content: space-between;
@@ -143,6 +145,7 @@ span{
 }
     #contenedor-pronostico-semana{
         display: flex;
+        padding: 1rem;
     }
         .contenedor-dias{
             background-color: var(--color-secundario);
@@ -176,7 +179,7 @@ span{
     }
 }
 @media screen and (max-width: 780px){
-    #segunda-seccion{
+    #segunda-seccion #contenedor-svg{
         overflow: scroll;
     }
 }
