@@ -24,7 +24,6 @@ span{
     display: block;
     background: var(--color-principal);
     background-size: cover;
-    height: 100vh;
 }
     #contenido-main{
         display: flex;
