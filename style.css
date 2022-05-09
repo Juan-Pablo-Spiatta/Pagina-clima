@@ -112,16 +112,24 @@ span{
             }
                 #contenedor-opciones > ul > li > button{
                     color: var(--color-fuente-principal);
-                    font-size: 1.5rem;
+                    display: flex;
                     background: none;
                     border-top: none;
                     border-left: none;
                     border-right: none;
+                    overflow: hidden;
                     border-bottom: 2px solid var(--color-fuente-principal);
+                    font-size: 1.5rem;
+                    width: 25px;
+                    height: 30px;
+                    transition: all .5s ease;
                 }
-                #contenedor-opciones > ul > li > button:focus{
-                    border-bottom: 2px solid orange;
-                }
+                    #contenedor-opciones > ul > li > button div{
+                        display: flex;
+                        align-items: center;
+                        margin-right: .5rem;
+                    }
+
     #segunda-seccion #contenedor-svg{
         padding: 1.5rem 0;
     } 
@@ -145,7 +153,7 @@ span{
 }
     #contenedor-pronostico-semana{
         display: flex;
-        padding: 1rem 0;
+        padding-bottom: .7rem;
     }
         .contenedor-dias{
             background-color: var(--color-secundario);
@@ -182,5 +190,18 @@ span{
 @media screen and (max-width: 780px){
     #segunda-seccion #contenedor-svg{
         overflow: scroll;
+    }
+    #contenedor-pronostico-semana{
+        display: flex;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 460px){
+    #left-section{
+        justify-content: center;
+    }
+    #left-section #contenedor-info{
+        flex-direction: column;
     }
 }
