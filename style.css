@@ -139,6 +139,29 @@ span{
             height: 0;
             transition: all 1s ease;
         }
+        #contenedor-svg > #graficaLluvia{
+            display: flex;
+            overflow: hidden;
+            justify-content: space-between;
+            height: 12.5rem;
+            width: 43.75rem;
+        }
+            #graficaLluvia p{
+                text-align: center;
+                margin: .5rem;
+            }
+            #graficaLluvia > article{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+                width: 75px;
+                background-color: #17011a;
+            }
+            #graficaLluvia div{
+                width: 75px;
+                background-color: #9220a1;
+            }
         #contenedor-svg > #graficaViento{
             overflow: hidden;
             display: flex;

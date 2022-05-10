@@ -44,59 +44,68 @@ const setHistoryWeatherData = data => {
             viento: {
                 velocidad: data.hourly[0].wind_speed,
                 direccion: data.hourly[0].wind_deg
-            }
+            },
+            probLluvia: data.hourly[0].pop
         },
         {
             temperatura: data.hourly[3].temp,
             viento: {
                 velocidad: data.hourly[3].wind_speed,
                 direccion: data.hourly[3].wind_deg
-            }
+            },
+            probLluvia: data.hourly[3].pop
         },
         {
             temperatura: data.hourly[6].temp,
             viento: {
                 velocidad: data.hourly[6].wind_speed,
                 direccion: data.hourly[6].wind_deg
-            }
+            },
+            probLluvia: data.hourly[6].pop
         },
         {
             temperatura: data.hourly[9].temp,
             viento: {
                 velocidad: data.hourly[9].wind_speed,
                 direccion: data.hourly[9].wind_deg
-            }
+            },
+            probLluvia: data.hourly[9].pop
         },
         {
             temperatura: data.hourly[12].temp,
             viento: {
                 velocidad: data.hourly[12].wind_speed,
                 direccion: data.hourly[12].wind_deg
-            }
+            },
+            probLluvia: data.hourly[12].pop
         },
         {
             temperatura: data.hourly[15].temp,
             viento: {
                 velocidad: data.hourly[15].wind_speed,
                 direccion: data.hourly[15].wind_deg
-            }
+            },
+            probLluvia: data.hourly[15].pop
         },
         {
             temperatura: data.hourly[18].temp,
             viento: {
                 velocidad: data.hourly[18].wind_speed,
                 direccion: data.hourly[18].wind_deg
-            }
+            },
+            probLluvia: data.hourly[18].pop
         },
         {
             temperatura: data.hourly[21].temp,
             viento: {
                 velocidad: data.hourly[21].wind_speed,
                 direccion: data.hourly[21].wind_deg
-            }
+            },
+            probLluvia: data.hourly[21].pop
         },
         
     ]
+    creaPrecipitacionesSVG(forescast24hs)
     creaTemperaturaSVG(forescast24hs)
     creaVientoSVG(forescast24hs)
 
