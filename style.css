@@ -147,18 +147,20 @@ span{
             width: 43.75rem;
         }
             #graficaLluvia p{
+                position: absolute;
                 text-align: center;
-                margin: .5rem;
+                margin: .5rem 0;
+                width: 100%;
             }
             #graficaLluvia > article{
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                position: relative;
                 margin-bottom: 1rem;
                 width: 75px;
                 background-color: #17011a;
             }
             #graficaLluvia div{
+                align-self: flex-end;
                 width: 75px;
                 background-color: #9220a1;
             }

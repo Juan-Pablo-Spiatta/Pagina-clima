@@ -5,8 +5,8 @@ function creaPrecipitacionesSVG(forescast24hs){
         const texto = document.createElement("p")
         const div = document.createElement("div")
 
-        texto.textContent = forescast24hs[i].probLluvia +"%"
-        div.style.height = `${100 * forescast24hs[i].probLluvia}px`
+        texto.textContent = Math.round(forescast24hs[i].probLluvia * 100) +"%"
+        div.style.height = `${100 * forescast24hs[i].probLluvia}%`
 
         articulo.appendChild(texto)
         articulo.appendChild(div)
